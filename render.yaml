@@ -1,0 +1,16 @@
+# =============================================================================
+# render.yaml — Render Blueprint for LAB 10 PHP Workspace
+# Docs: https://render.com/docs/blueprint-spec
+# =============================================================================
+
+services:
+  - type: web
+    name: lab10-php-web-applications
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health.php
+    autoDeploy: true
