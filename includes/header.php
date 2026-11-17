@@ -81,10 +81,6 @@ $currentPage = current_page();
         </ul>
     </nav>
 
-    <!-- Footer note -->
-    <div class="sidebar-footer">
-        <span>BTech CSE &mdash; Web Programming</span>
-    </div>
 </aside>
 
 <!-- ================================================================

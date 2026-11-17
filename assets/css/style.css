@@ -190,15 +190,6 @@ button { cursor: pointer; font-family: inherit; }
 
 .nav-link.active .nav-num { opacity: 1; }
 
-/* Sidebar footer */
-.sidebar-footer {
-    padding: 16px 20px;
-    border-top: 1px solid var(--clr-sidebar-border);
-    font-size: 11px;
-    color: var(--clr-sidebar-text);
-    opacity: .6;
-    letter-spacing: .02em;
-}
 
 /* ------------------------------------------------------------------
    3. MAIN WRAPPER & TOPBAR
