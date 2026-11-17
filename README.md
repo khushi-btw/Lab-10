@@ -91,6 +91,3 @@ The `health.php` endpoint (`/health.php`) is used by Render as the health-check 
 
 ---
 
-## Author
-
-BTech CSE Student | Web Programming Lab | 2026
