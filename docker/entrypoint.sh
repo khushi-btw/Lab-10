@@ -1,6 +1,6 @@
-﻿#!/bin/sh
+#!/bin/sh
 # =============================================================================
-# entrypoint.sh â€” Start Apache listening on the port Render provides
+# entrypoint.sh - Start Apache listening on the port Render provides
 # =============================================================================
 set -e
 
@@ -9,7 +9,7 @@ PORT="${PORT:-8080}"
 
 echo "Starting Apache on port $PORT ..."
 
-# 1. Update Apache's global Listen directive
+# 1. Update Apache global Listen directive
 sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf
 
 # 2. Update the default VirtualHost port
