@@ -1,6 +1,6 @@
 # Lab 10: PHP Applications
 
-Three independent PHP applications with a shared, responsive navy and teal interface. The project uses core PHP, HTML, and CSS without a framework or external runtime dependencies.
+Three independent PHP applications with a shared, responsive dark plum, pink, and lavender interface. The project uses core PHP, HTML, and CSS without a framework or external runtime dependencies.
 
 **Repository:** [khushi-btw/Lab-10](https://github.com/khushi-btw/Lab-10)
 

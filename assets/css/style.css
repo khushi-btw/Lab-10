@@ -1,14 +1,14 @@
 :root {
     color-scheme:dark;
-    --bg:#071b2b;
-    --bg-deep:#051522;
-    --panel:#0c2435;
-    --panel-soft:#102d40;
-    --border:rgba(182,218,224,.13);
-    --text:#ecf4f4;
-    --muted:#94aab4;
-    --teal:#62ddc4;
-    --teal-dim:#163f47;
+    --bg:#1b1128;
+    --bg-deep:#120b1c;
+    --panel:#291a38;
+    --panel-soft:#352246;
+    --border:rgba(226,207,238,.13);
+    --text:#fbf3ff;
+    --muted:#c1accd;
+    --teal:#f18acb;
+    --teal-dim:#54264e;
     --red:#ff9c9c;
     --mono:ui-monospace,'Cascadia Code',Consolas,monospace;
     --sans:Inter,'Segoe UI',system-ui,sans-serif;
@@ -25,7 +25,7 @@ html {
 }
 body {
     margin:0;
-    background:radial-gradient(ellipse at 80% -15%,rgba(28,105,107,.22),transparent 38%),var(--bg);
+    background:radial-gradient(ellipse at 80% -15%,rgba(120,61,142,.22),transparent 38%),var(--bg);
     color:var(--text);
     font-family:var(--sans);
     font-size:15px;
@@ -47,8 +47,8 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    border-bottom:1px solid rgba(182,218,224,.09);
-    background:rgba(5,21,34,.55)
+    border-bottom:1px solid rgba(226,207,238,.09);
+    background:rgba(25,15,36,.55)
 }
 .brand {
     display:flex;
@@ -69,7 +69,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .brand-mark {
     width:38px;
     height:38px;
-    border:1px solid rgba(98,221,196,.45);
+    border:1px solid rgba(241,138,203,.45);
     border-radius:12px;
     display:grid;
     place-items:center;
@@ -98,11 +98,11 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .nav a span {
     font:10px var(--mono);
-    color:#69828e
+    color:#a98caf
 }
 .nav a:hover,.nav a.active {
     color:var(--text);
-    background:rgba(98,221,196,.08)
+    background:rgba(241,138,203,.08)
 }
 .nav a.active span {
     color:var(--teal)
@@ -128,7 +128,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     margin:0 0 13px
 }
 .eyebrow span {
-    color:#587581;
+    color:#94769f;
     padding:0 5px
 }
 .page-heading h1 {
@@ -146,8 +146,8 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     align-items:center;
     gap:12px;
     padding:11px 15px;
-    background:rgba(98,221,196,.055);
-    border:1px solid rgba(98,221,196,.16);
+    background:rgba(241,138,203,.055);
+    border:1px solid rgba(241,138,203,.16);
     border-radius:12px;
     color:var(--muted);
     font:9px var(--mono);
@@ -167,7 +167,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     display:inline-block;
     border-radius:50%;
     background:var(--teal);
-    box-shadow:0 0 12px rgba(98,221,196,.6);
+    box-shadow:0 0 12px rgba(241,138,203,.6);
     flex:0 0 auto
 }
 .intro-banner {
@@ -178,7 +178,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     justify-content:space-between;
     position:relative;
     overflow:hidden;
-    background:linear-gradient(115deg,#0d293a 0%,#0a2535 55%,#0c333c 100%);
+    background:linear-gradient(115deg,#2a1b3a 0%,#251731 55%,#3a2044 100%);
     border:1px solid var(--border);
     border-radius:24px;
     box-shadow:0 20px 60px rgba(0,0,0,.18)
@@ -198,7 +198,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .intro-copy>p:last-child {
     font-size:14px;
-    color:#a7bbc2;
+    color:#d2bddc;
     max-width:440px;
     line-height:1.75;
     margin:17px 0 0
@@ -214,7 +214,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .orbit {
     position:absolute;
-    border:1px solid rgba(98,221,196,.2);
+    border:1px solid rgba(241,138,203,.2);
     border-radius:50%;
     transform:rotate(-28deg)
 }
@@ -226,26 +226,26 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     width:190px;
     height:250px;
     transform:rotate(47deg);
-    border-color:rgba(98,221,196,.12)
+    border-color:rgba(241,138,203,.12)
 }
 .orbit-core {
     height:82px;
     width:82px;
     display:grid;
     place-items:center;
-    background:rgba(98,221,196,.11);
-    border:1px solid rgba(98,221,196,.38);
+    background:rgba(241,138,203,.11);
+    border:1px solid rgba(241,138,203,.38);
     border-radius:25px;
     color:var(--teal);
     font:500 22px var(--mono);
-    box-shadow:0 0 60px rgba(98,221,196,.12);
+    box-shadow:0 0 60px rgba(241,138,203,.12);
     transform:rotate(-8deg)
 }
 .orbit-label {
     position:absolute;
     right:-8px;
     bottom:27px;
-    color:#91aaaF;
+    color:#c09abf;
     font:9px/1.7 var(--mono);
     letter-spacing:.1em
 }
@@ -265,7 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .section-note {
     font:10px var(--mono);
-    color:#718b97
+    color:#b49ab9
 }
 .app-grid {
     display:grid;
@@ -277,14 +277,14 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     flex-direction:column;
     min-height:280px;
     padding:22px 23px 19px;
-    background:linear-gradient(145deg,rgba(15,42,59,.94),rgba(10,31,46,.96));
+    background:linear-gradient(145deg,rgba(48,29,63,.94),rgba(35,21,48,.96));
     border:1px solid var(--border);
     border-radius:18px;
     transition:transform .24s var(--ease),border-color .24s,box-shadow .24s
 }
 .app-card:hover {
     transform:translateY(-5px);
-    border-color:rgba(98,221,196,.42);
+    border-color:rgba(241,138,203,.42);
     box-shadow:0 18px 35px rgba(0,0,0,.2)
 }
 .card-top,.card-bottom {
@@ -295,10 +295,10 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .app-number,.note-foot {
     font:9px var(--mono);
     letter-spacing:.12em;
-    color:#76909c
+    color:#b8a0bf
 }
 .card-arrow {
-    color:#68828e;
+    color:#a88aaf;
     transition:transform .2s
 }
 .app-card:hover .card-arrow {
@@ -315,16 +315,16 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     font-size:20px
 }
 .symbol-user {
-    color:#72dfcc;
-    background:rgba(98,221,196,.1)
+    color:#f3a6dd;
+    background:rgba(241,138,203,.1)
 }
 .symbol-clock {
-    color:#8fccc9;
-    background:rgba(98,221,196,.07)
+    color:#d79bd4;
+    background:rgba(241,138,203,.07)
 }
 .symbol-check {
-    color:#ade8d8;
-    background:rgba(98,221,196,.1)
+    color:#fac9ee;
+    background:rgba(241,138,203,.1)
 }
 .app-card h3 {
     font:600 18px var(--display);
@@ -340,12 +340,12 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .card-bottom {
     margin-top:auto;
     padding-top:15px;
-    border-top:1px solid rgba(182,218,224,.09);
+    border-top:1px solid rgba(226,207,238,.09);
     font-size:10px;
-    color:#76909c
+    color:#b8a0bf
 }
 .card-bottom span:last-child {
-    color:#c2d3d6
+    color:#eadbee
 }
 .card-bottom b {
     color:var(--teal);
@@ -359,9 +359,9 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     align-items:center;
     gap:15px;
     padding:16px 20px;
-    border:1px solid rgba(182,218,224,.1);
+    border:1px solid rgba(226,207,238,.1);
     border-radius:14px;
-    background:rgba(7,27,43,.54)
+    background:rgba(33,19,46,.54)
 }
 .principle-mark {
     font-size:21px;
@@ -374,13 +374,13 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     margin:0
 }
 .principle-row strong,.method-note strong {
-    color:#d7e4e5;
+    color:#f1e3f7;
     font-weight:600
 }
 .principle-tag,.method-tag {
     font:9px var(--mono);
     letter-spacing:.08em;
-    color:#829aa4
+    color:#c0a9c7
 }
 .content-grid {
     display:grid;
@@ -389,7 +389,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     align-items:stretch
 }
 .surface {
-    background:linear-gradient(145deg,rgba(14,39,55,.98),rgba(9,29,44,.98));
+    background:linear-gradient(145deg,rgba(44,27,59,.98),rgba(33,20,46,.98));
     border:1px solid var(--border);
     border-radius:var(--radius);
     box-shadow:0 16px 40px rgba(0,0,0,.13)
@@ -406,7 +406,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     gap:9px
 }
 .status-divider {
-    color:#587581
+    color:#94769f
 }
 .feature-title {
     font:600 clamp(31px,4vw,44px)/1.15 var(--display);
@@ -432,26 +432,26 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .form-stack label {
     font:10px var(--mono);
     letter-spacing:.06em;
-    color:#b2c4c9;
+    color:#dfcee7;
     margin-top:4px
 }
 .form-stack input {
     width:100%;
     height:48px;
-    border:1px solid rgba(182,218,224,.18);
+    border:1px solid rgba(226,207,238,.18);
     border-radius:10px;
-    background:#071d2c;
+    background:#1d132b;
     color:var(--text);
     font:13px var(--sans);
     padding:0 14px;
     transition:border-color .2s,box-shadow .2s
 }
 .form-stack input::placeholder {
-    color:#5e7884
+    color:#9c7fa8
 }
 .form-stack input:focus {
-    border-color:rgba(98,221,196,.6);
-    box-shadow:0 0 0 3px rgba(98,221,196,.08);
+    border-color:rgba(241,138,203,.6);
+    box-shadow:0 0 0 3px rgba(241,138,203,.08);
     outline:none
 }
 .button {
@@ -473,21 +473,21 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .button-primary {
     background:var(--teal);
-    color:#06202c;
+    color:#24132a;
     max-width:max-content;
     margin-top:8px
 }
 .button-primary:hover {
-    background:#8aecd9;
-    box-shadow:0 7px 22px rgba(98,221,196,.16)
+    background:#f7b5e5;
+    box-shadow:0 7px 22px rgba(241,138,203,.16)
 }
 .button-outline {
     background:transparent;
-    border-color:rgba(182,218,224,.2);
-    color:#d3e1e3
+    border-color:rgba(226,207,238,.2);
+    color:#f1e4f5
 }
 .button-outline:hover {
-    border-color:rgba(98,221,196,.5);
+    border-color:rgba(241,138,203,.5);
     color:var(--teal)
 }
 .form-error {
@@ -508,8 +508,8 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     position:relative;
     overflow:hidden;
     padding:30px 26px;
-    background:linear-gradient(160deg,rgba(14,46,57,.86),rgba(9,31,45,.7));
-    border:1px solid rgba(98,221,196,.13);
+    background:linear-gradient(160deg,rgba(58,34,72,.86),rgba(38,23,52,.7));
+    border:1px solid rgba(241,138,203,.13);
     border-radius:var(--radius);
     display:flex;
     flex-direction:column;
@@ -517,7 +517,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .note-number {
     font:11px var(--mono);
-    color:rgba(98,221,196,.48);
+    color:rgba(241,138,203,.48);
     letter-spacing:.1em
 }
 .side-note h3 {
@@ -533,14 +533,14 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .side-note code,.method-note code {
     font:10px var(--mono);
-    color:#a4e5d9;
-    background:rgba(98,221,196,.07);
+    color:#f4b2e6;
+    background:rgba(241,138,203,.07);
     padding:2px 4px;
     border-radius:4px
 }
 .note-rule {
     height:1px;
-    background:rgba(182,218,224,.1);
+    background:rgba(226,207,238,.1);
     margin:25px 0 13px
 }
 .note-foot {
@@ -569,12 +569,12 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     display:block;
     font:8px var(--mono);
     letter-spacing:.1em;
-    color:#78929d;
+    color:#bba2c2;
     margin-bottom:6px
 }
 .detail-strip strong {
     font:500 12px var(--sans);
-    color:#dce8e8
+    color:#f5eafa
 }
 .detail-strip small {
     font-size:10px;
@@ -595,8 +595,8 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     height:45px;
     display:grid;
     place-items:center;
-    border:1px solid rgba(98,221,196,.35);
-    background:rgba(98,221,196,.08);
+    border:1px solid rgba(241,138,203,.35);
+    background:rgba(241,138,203,.08);
     color:var(--teal);
     border-radius:50%;
     font-size:21px
@@ -620,7 +620,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     padding:48px clamp(24px,7vw,80px);
     border:1px solid var(--border);
     border-radius:22px;
-    background:radial-gradient(ellipse at 50% 0,rgba(36,115,111,.12),transparent 53%),linear-gradient(135deg,#0d2939,#091f30);
+    background:radial-gradient(ellipse at 50% 0,rgba(151,73,141,.12),transparent 53%),linear-gradient(135deg,#2b1b3a,#21152f);
     text-align:center;
     box-shadow:0 18px 44px rgba(0,0,0,.15)
 }
@@ -631,7 +631,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     gap:10px;
     font:9px var(--mono);
     letter-spacing:.12em;
-    color:#83a2aa
+    color:#c2a8cc
 }
 .time-zone {
     border-left:1px solid var(--border);
@@ -646,12 +646,12 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .date-readout {
     font:13px var(--mono);
-    color:#a1b7bd
+    color:#d2bfd9
 }
 .time-rule {
     height:1px;
     max-width:550px;
-    background:linear-gradient(90deg,transparent,rgba(98,221,196,.32),transparent);
+    background:linear-gradient(90deg,transparent,rgba(241,138,203,.32),transparent);
     margin:34px auto
 }
 .time-details {
@@ -672,16 +672,16 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .time-details span {
     font:8px var(--mono);
     letter-spacing:.1em;
-    color:#718d98
+    color:#b59abb
 }
 .time-details strong {
     font:500 13px var(--sans);
-    color:#d8e5e6;
+    color:#f2e5f6;
     margin-top:5px
 }
 .refresh-note {
     font-size:10px;
-    color:#78929c;
+    color:#bba2c2;
     margin:30px 0 0
 }
 .refresh-note a {
@@ -693,7 +693,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     height:34px;
     display:grid;
     place-items:center;
-    border:1px solid rgba(98,221,196,.2);
+    border:1px solid rgba(241,138,203,.2);
     border-radius:10px;
     color:var(--teal);
     font:17px var(--mono);
@@ -713,8 +713,8 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 }
 .result-icon.granted {
     color:var(--teal);
-    background:rgba(98,221,196,.1);
-    border:1px solid rgba(98,221,196,.22)
+    background:rgba(241,138,203,.1);
+    border:1px solid rgba(241,138,203,.22)
 }
 .result-icon.denied {
     color:var(--red);
@@ -730,16 +730,16 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .site-footer {
     min-height:69px;
     padding:0 clamp(22px,7vw,112px);
-    border-top:1px solid rgba(182,218,224,.08);
+    border-top:1px solid rgba(226,207,238,.08);
     display:flex;
     align-items:center;
     justify-content:space-between;
-    color:#718a95;
+    color:#b39ab8;
     font:9px var(--mono);
     letter-spacing:.06em
 }
 .site-footer a {
-    color:#a4bac0;
+    color:#d9c5e0;
     transition:color .2s
 }
 .site-footer a:hover {
