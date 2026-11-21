@@ -8,7 +8,6 @@ http_response_code(200);
 
 echo json_encode([
     'status'    => 'ok',
-    'service'   => 'lab10-php-web-applications',
+    'service'   => 'personal-tools',
     'timestamp' => date('c'),
-    'php'       => PHP_VERSION,
 ]);

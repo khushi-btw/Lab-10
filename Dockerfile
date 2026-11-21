@@ -1,5 +1,5 @@
 # =============================================================================
-# Dockerfile - LAB 10 PHP Workspace
+# Docker image configuration
 # Base image: php:8.2-apache (official, Debian-based)
 # =============================================================================
 

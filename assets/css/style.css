@@ -397,6 +397,40 @@ a:focus-visible,button:focus-visible,input:focus-visible {
 .main-surface {
     padding:clamp(28px,5vw,52px)
 }
+.single-surface {
+    width:100%;
+    max-width:760px;
+    margin:0 auto
+}
+.single-surface .form-stack {
+    width:100%
+}
+.field-error {
+    color:#ffb2b2;
+    font-size:12px;
+    margin:-5px 0 4px
+}
+.age-result {
+    margin-top:24px;
+    padding:16px 18px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.65
+}
+.age-result p {
+    margin:0
+}
+.age-result.authorized {
+    background:rgba(241,138,203,.08);
+    border-color:rgba(241,138,203,.25);
+    color:#f4b2e6
+}
+.age-result.denied {
+    background:rgba(255,156,156,.06);
+    border-color:rgba(255,156,156,.23);
+    color:#ffb2b2
+}
 .status-label {
     font:9px var(--mono);
     letter-spacing:.14em;
@@ -801,7 +835,7 @@ a:focus-visible,button:focus-visible,input:focus-visible {
     margin-bottom:30px
 }
 .session-chip {
-    align-self:flex-start
+    align-self:flex-end
 }
 
 }

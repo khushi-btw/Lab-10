@@ -1,5 +1,5 @@
 /**
- * script.js — Vanilla JS interactions for LAB 10 PHP Workspace
+ * script.js — Optional interface helpers
  * Handles: sidebar toggle, mobile overlay, active-link detection
  */
 

@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/bootstrap.php';
-if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SESSION['username'], $_SESSION['start_time'])) {
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST' || !isset($_SESSION['username'], $_SESSION['start_time'])) {
     redirect('session.php');
 }
 $username = (string) $_SESSION['username'];
@@ -14,9 +14,12 @@ if (ini_get('session.use_cookies')) {
     setcookie(session_name(), '', ['expires' => time() - 42000, 'path' => $cookie['path'], 'domain' => $cookie['domain'], 'secure' => $cookie['secure'], 'httponly' => $cookie['httponly'], 'samesite' => $cookie['samesite'] ?? 'Lax']);
 }
 session_destroy();
-$pageTitle = 'Until next time';
-$pageDesc = 'Your session has ended and its stored data has been cleared.';
+$pageTitle = 'Thank You, ' . $username . '!';
 require_once 'includes/header.php';
 ?>
-<section class="surface goodbye-surface"><span class="success-mark">✓</span><p class="eyebrow">SESSION COMPLETE</p><h2>Thank you, <span class="accent-text"><?= e($username) ?></span>.</h2><p class="surface-copy">Your visit lasted <strong><?= e($durationText) ?></strong>.</p><div class="detail-strip centered"><div><span>STARTED</span><strong><?= e(date('d M Y · h:i:s A', $start)) ?></strong></div><div><span>ENDED</span><strong><?= e(date('d M Y · h:i:s A', $end)) ?></strong></div><div><span>DURATION</span><strong><?= e($durationText) ?> <small>(<?= e((string) $duration) ?> sec)</small></strong></div></div><a class="button button-primary" href="session.php">Start another session <span aria-hidden="true">→</span></a></section>
+<section class="surface goodbye-surface">
+    <span class="success-mark" aria-hidden="true">✓</span>
+    <p class="surface-copy">Your session lasted <strong><?= e($durationText) ?></strong>.</p>
+    <a class="button button-primary" href="session.php">Start again <span aria-hidden="true">→</span></a>
+</section>
 <?php require_once 'includes/footer.php'; ?>

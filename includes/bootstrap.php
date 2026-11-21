@@ -1,6 +1,6 @@
 <?php
 /**
- * bootstrap.php — Global bootstrap for LAB 10 PHP Workspace
+ * bootstrap.php — Shared initialization and helper functions
  * Loaded on every page; sets up sessions, timezone and helpers.
  */
 
@@ -35,21 +35,21 @@ function redirect(string $url): never {
     exit;
 }
 
-/**
- * Return the current page filename so the sidebar can mark it active.
- */
+/** Return the current page filename so navigation can mark it active. */
 function current_page(): string {
     return basename($_SERVER['PHP_SELF']);
 }
 
-/**
- * Format a duration in seconds as "X min Y sec".
- */
+/** Format a duration in words. */
 function format_duration(int $seconds): string {
-    if ($seconds < 60) {
-        return $seconds . ' sec';
-    }
     $mins = intdiv($seconds, 60);
     $secs = $seconds % 60;
-    return $mins . ' min ' . $secs . ' sec';
+    $parts = [];
+    if ($mins > 0) {
+        $parts[] = $mins . ' minute' . ($mins === 1 ? '' : 's');
+    }
+    if ($secs > 0 || $mins === 0) {
+        $parts[] = $secs . ' second' . ($secs === 1 ? '' : 's');
+    }
+    return count($parts) > 1 ? implode(' and ', $parts) : $parts[0];
 }
