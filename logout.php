@@ -19,7 +19,8 @@ require_once 'includes/header.php';
 ?>
 <section class="surface goodbye-surface">
     <span class="success-mark" aria-hidden="true">✓</span>
-    <p class="surface-copy">Your session lasted <strong><?= e($durationText) ?></strong>.</p>
+    <p class="goodbye-copy">Your session lasted</p>
+    <p class="duration-value"><?= e($durationText) ?></p>
     <a class="button button-primary" href="session.php">Start again <span aria-hidden="true">→</span></a>
 </section>
 <?php require_once 'includes/footer.php'; ?>

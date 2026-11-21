@@ -19,9 +19,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     }
 }
 $pageTitle = 'Start Session';
+$pageDesc = 'Enter your name to get started.';
 require_once 'includes/header.php';
 ?>
 <section class="surface main-surface single-surface">
+    <div class="form-emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></div>
     <?php if ($error !== ''): ?><p class="form-error" role="alert"><?= e($error) ?></p><?php endif; ?>
     <form method="post" action="session.php" class="form-stack">
         <label for="username">Name</label>

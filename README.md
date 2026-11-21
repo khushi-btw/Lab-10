@@ -1,6 +1,6 @@
 # Personal Tools
 
-A simple, responsive website with three tools: a session greeting, a date and time display, and an age check.
+A responsive application dashboard with a dark plum palette and blush pink and lavender accents. It brings together a session greeting, date and time display, and age verification.
 
 ## Run locally
 

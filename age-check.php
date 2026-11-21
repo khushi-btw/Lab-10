@@ -22,9 +22,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     }
 }
 $pageTitle = 'Age Verification';
+$pageDesc = 'Enter your name and age to check access.';
 require_once 'includes/header.php';
 ?>
 <section class="surface main-surface single-surface">
+    <div class="form-emblem icon-rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
     <form method="post" action="age-check.php" class="form-stack">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" maxlength="80" autocomplete="name" placeholder="Your name" value="<?= e($name) ?>" required>
