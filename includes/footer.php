@@ -1,9 +1,4 @@
-    </main><!-- /.page-content -->
-</div><!-- /.main-wrapper -->
-
-<!-- Mobile overlay -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-<script src="assets/js/script.js"></script>
+</main>
+<footer class="site-footer"><span>LAB 10 <span class="dot">·</span> Core PHP, thoughtfully applied</span><a href="index.php">Back to overview <span aria-hidden="true">↗</span></a></footer>
 </body>
 </html>

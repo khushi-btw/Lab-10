@@ -1,93 +1,37 @@
-# LAB 10 — PHP Web Applications
+# Lab 10 — PHP Applications
 
-> **BTech CSE | Web Programming | Lab 10**
->
-> Three practical PHP applications built on a single cohesive platform with a custom design system.
-
----
+A small PHP workspace with three independent applications and a responsive navy and teal interface. It uses core PHP, HTML and CSS, with no framework or external runtime dependency.
 
 ## Applications
 
-| # | Application | File |
-|---|-------------|------|
-| 01 | Session-Based Greeting & Logout | `session.php`, `logout.php` |
-| 02 | Current Date, Time & Day | `datetime.php` |
-| 03 | Age-Based Access Checker | `age-check.php` |
+1. **Session greeting** (`session.php`, `logout.php`) — submits a name into a PHP session, displays the greeting and session start time, then reports the elapsed duration and destroys the session on logout.
+2. **Date and time** (`datetime.php`) — renders the current date, time and weekday from PHP's `date()` function. Refresh the page for a new server generated snapshot.
+3. **Age access** (`age-check.php`) — validates a name and whole number age on the server, then welcomes visitors aged 18 or above and displays the not authorized message to younger visitors.
 
----
+## Run locally
 
-## Project Structure
+### PHP built-in server
 
-```
-lab10-php-web-applications/
-│
-├── index.php           ← Dashboard / Overview
-├── session.php         ← App 01 – Session greeting (form + greeting view)
-├── logout.php          ← App 01 – Logout & thank-you page
-├── datetime.php        ← App 02 – Date, time & day
-├── age-check.php       ← App 03 – Age-based access checker
-├── health.php          ← Health-check endpoint (for Render/Docker)
-│
-├── includes/
-│   ├── bootstrap.php   ← Session start, timezone, helper functions
-│   ├── header.php      ← Shared HTML head, sidebar, topbar
-│   └── footer.php      ← Closing tags, JS include
-│
-├── assets/
-│   ├── css/style.css   ← Full custom design system (no Bootstrap/Tailwind)
-│   └── js/script.js    ← Vanilla JS (sidebar toggle, minor UX only)
-│
-├── Dockerfile          ← PHP 8.2 + Apache image for Render deployment
-├── docker/
-│   └── entrypoint.sh   ← Sets Apache to listen on $PORT (Render requirement)
-├── render.yaml         ← Render Blueprint (Docker web service, free plan)
-└── .gitignore
-```
+Install PHP 8 or newer, open a terminal in this directory, and run:
 
----
-
-## Running Locally
-
-### Option A — PHP built-in server
-
-```bash
-# Requires PHP 8+ on your PATH
-cd lab10-php-web-applications
+```sh
 php -S localhost:8000
 ```
 
-Open <http://localhost:8000>
+Then visit <http://localhost:8000>.
 
-### Option B — Docker
+### XAMPP
 
-```bash
-docker build -t lab10-php .
-docker run -p 8000:8080 -e PORT=8080 lab10-php
-```
+Copy this project folder into XAMPP's `htdocs` directory, start Apache in the XAMPP Control Panel, and open <http://localhost/lab10-php-web-applications/>.
 
-Open <http://localhost:8000>
+## Structure
 
----
+- `index.php` — landing page and application links
+- `session.php`, `logout.php` — session greeting and logout duration
+- `datetime.php` — server date and time
+- `age-check.php` — server validated age check
+- `includes/` — shared bootstrap, navigation and page footer
+- `assets/css/style.css` — responsive visual system
+- `assets/js/script.js` — legacy helper file (not required by the redesigned pages)
 
-## Deployment (Render)
-
-1. Push this repository to GitHub.
-2. Go to [render.com](https://render.com) → **New → Blueprint**.
-3. Connect your GitHub repository.
-4. Render reads `render.yaml` and creates the service automatically.
-5. Wait for the build to complete; your app will be live at the provided URL.
-
-The `health.php` endpoint (`/health.php`) is used by Render as the health-check URL.
-
----
-
-## Technical Notes
-
-- **PHP sessions** (`$_SESSION`) store the username and start timestamp in App 01.
-- **`date()`** with `Asia/Kolkata` timezone generates all values in App 02.
-- **Input validation** uses `ctype_digit()` and `trim()` — no database needed.
-- **HTML escaping** uses `htmlspecialchars()` via the `e()` helper in `bootstrap.php`.
-- **No frameworks** — PHP, HTML5, CSS3 and vanilla JS only.
-
----
-
+PHP's timezone is set in `includes/bootstrap.php`. Set it to your local timezone if needed.
